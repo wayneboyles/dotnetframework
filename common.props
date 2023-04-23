@@ -1,22 +1,29 @@
 <Project>
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;net6.0;net7.0</TargetFrameworks>
+		<TargetFramework>net7.0</TargetFramework>
 		<LangVersion>latest</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
+		<Nullable>disable</Nullable>
 	</PropertyGroup>
 	
 	<PropertyGroup>
 		<Authors>Wayne Boyles</Authors>
 		<Copyright>Copyright (C) 2023 Wayne Boyles</Copyright>
 		<Version>0.1.0</Version>
-		<VersionSuffix>beta</VersionSuffix>
 		<AssemblyVersion>$(Version)</AssemblyVersion>
 		<FileVersion>$(Version)</FileVersion>
 		<RepositoryUrl>https://github.com/wayneboyles/simpledotnet-framework</RepositoryUrl>
 		<ProjectUrl>https://github.com/wayneboyles/simpledotnet-framework</ProjectUrl>
 		<RepositoryType>git</RepositoryType>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(VersionSuffix)'!=''">
+		<PackageVersion>$(Version)-$(VersionSuffix)</PackageVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(VersionSuffix)'==''">
+		<PackageVersion>$(Version)</PackageVersion>
 	</PropertyGroup>
 	
 </Project>
