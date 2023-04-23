@@ -10,6 +10,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		common.props = common.props
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDotNet.Framework.AspNetCore.Components", "src\SimpleDotNet.Framework.AspNetCore.Components\SimpleDotNet.Framework.AspNetCore.Components.csproj", "{F301D9E0-8FF5-4BDD-AE7B-433B9C695D32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDotNet.Framework.AspNetCore.Components.Web", "src\SimpleDotNet.Framework.AspNetCore.Components.Web\SimpleDotNet.Framework.AspNetCore.Components.Web.csproj", "{82B043B9-543C-4520-8A16-E1B5A70635E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +24,14 @@ Global
 		{95681022-77F1-4FD1-8DCE-955866C313BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95681022-77F1-4FD1-8DCE-955866C313BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95681022-77F1-4FD1-8DCE-955866C313BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F301D9E0-8FF5-4BDD-AE7B-433B9C695D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F301D9E0-8FF5-4BDD-AE7B-433B9C695D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F301D9E0-8FF5-4BDD-AE7B-433B9C695D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F301D9E0-8FF5-4BDD-AE7B-433B9C695D32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82B043B9-543C-4520-8A16-E1B5A70635E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82B043B9-543C-4520-8A16-E1B5A70635E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82B043B9-543C-4520-8A16-E1B5A70635E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82B043B9-543C-4520-8A16-E1B5A70635E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
