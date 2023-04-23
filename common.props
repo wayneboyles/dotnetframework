@@ -1,21 +1,40 @@
 <Project>
 
+	<!-- Lang Properties -->
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
 		<LangVersion>latest</LangVersion>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>disable</Nullable>
 	</PropertyGroup>
+
+	<!-- Attributes -->
+	<PropertyGroup>
+		<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+	</PropertyGroup>
+
+	<!-- Include symbols in nupkg -->
+	<PropertyGroup>
+		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+	</PropertyGroup>
 	
+	<!-- Package -->
 	<PropertyGroup>
 		<Authors>Wayne Boyles</Authors>
 		<Copyright>Copyright (C) 2023 Wayne Boyles</Copyright>
-		<Version>0.1.0</Version>
-		<AssemblyVersion>$(Version)</AssemblyVersion>
-		<FileVersion>$(Version)</FileVersion>
 		<RepositoryUrl>https://github.com/wayneboyles/simpledotnet-framework</RepositoryUrl>
 		<ProjectUrl>https://github.com/wayneboyles/simpledotnet-framework</ProjectUrl>
 		<RepositoryType>git</RepositoryType>
+		<PackageProjectUrl>https://github.com/wayneboyles/simpledotnet-framework</PackageProjectUrl>
+	</PropertyGroup>
+	
+	<!-- Version -->
+	<PropertyGroup>
+		<Version>0.1.0</Version>
+		<AssemblyVersion>$(Version)</AssemblyVersion>
+		<FileVersion>$(Version)</FileVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(VersionSuffix)'!=''">
@@ -25,5 +44,28 @@
 	<PropertyGroup Condition="'$(VersionSuffix)'==''">
 		<PackageVersion>$(Version)</PackageVersion>
 	</PropertyGroup>
+	
+	<!-- SourceLink -->
+	<ItemGroup>
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\..\assets\logo-white.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 	
 </Project>

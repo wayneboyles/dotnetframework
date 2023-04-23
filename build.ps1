@@ -1,3 +1,12 @@
+[CmdletBinding()]
+param (
+	[Parameter()]
+	[switch] $PreRelease,
+
+	[Parameter()]
+	[switch] $DebugBuild
+)
+
 function Exec {
 	[CmdletBinding()]
 	param (
@@ -24,4 +33,13 @@ Get-ChildItem -Path .\src -Directory | ForEach-Object {
 	Remove-Item $_\obj -Recurse -Force
 }
 
-Exec { & dotnet pack -c Release -o .\artifacts }
+$Release = 'Release'
+if ($PSBoundParameters.ContainsKey('DebugBuild')) {
+	$Release = 'Debug'
+}
+
+if ($PSBoundParameters.ContainsKey('PreRelease')) {
+	Exec { & dotnet pack -c $Release -o .\artifacts --version-suffix=beta }
+} else {
+	Exec { & dotnet pack -c $Release -o .\artifacts }
+}
