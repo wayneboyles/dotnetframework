@@ -10,7 +10,7 @@
 	<PropertyGroup>
 		<Authors>Wayne Boyles</Authors>
 		<Copyright>Copyright (C) 2023 Wayne Boyles</Copyright>
-		<Version>0.1</Version>
+		<Version>0.1.0</Version>
 		<VersionSuffix>beta</VersionSuffix>
 		<AssemblyVersion>$(Version)</AssemblyVersion>
 		<FileVersion>$(Version)</FileVersion>
